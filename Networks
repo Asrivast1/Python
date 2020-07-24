@@ -1,0 +1,17 @@
+TCP Port Numbers - :
+A port is an application-specific or process-specific software communications endpoint
+It allows multiple networked applications to coexist on the same server
+There is a list of well-known TCP port numbers
+Common TCP Ports
+Telnet (23) - Login
+SSH (22) - Secure Login
+HTTP (80)
+HTTPS (443) - Secure
+SMTP (25) (Mail)
+IMAP (143/220/993) - Mail Retrieval
+POP (109/110) - Mail Retrieval
+DNS (53) - Domain Name
+FTP (20) - File Transfer
+Using Telnet - :
+$ telnet www.dr-chuck.com 80
+GET http://www.dr-chuck.com/page1.htm HTTP/1.0

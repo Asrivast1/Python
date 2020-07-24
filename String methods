@@ -1,0 +1,14 @@
+str.replace(old, new, [count]) -:
+Return a copy with all the string with all occurrences of substring old replaced by new. If the optional argument count is given, only the first count occurrences are replaced.
+str.rfind(sub, [start], [end]) -:
+Return the highest index in the string where substring sub is found, such that sub is contained within s[start:end]. Option arguments start and end are interpreted as in slice notation. Return -1 on failure.
+str.rindex(sub, [start], [end]) -:
+Like rfind() but raises ValueError when the substring sub is not found.
+str.rjust(width, [fillchar]) -:
+Return the string right justified in a string of length width. Padding is done using the specified fillchar (default is an ASCII space). The original string is returned if width is less than or equal to len(s).
+str.rpartition(sep) -:
+Split the string at the last occurence of sep, and return a 3-tuple containing the part before the seperator, the seperator itself, and the part after the seperator. If the seperator is not found, return a 3-tuple
+containing two empty strings, followed by the string itself.
+str.rsplit(sep=None, maxsplit=-1) -:
+Return a list of the words in the string, using the sep as the delimiter string. If maxsplit is given, at most maxsplit splits are done, the rightmost ones. If sep is not specified or None, any whitespace string is a seperator.
+Except for splitting from the right, rsplit() behaves like split() which is describes in detail below.
