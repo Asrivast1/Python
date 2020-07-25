@@ -64,6 +64,8 @@ lst2 = [1, 4, 1, 1, 2]
 a = set(lst1)
 b = set(lst2)
 if(a & b) : print(a & b)
+# Question 4 The other way
+print([x for x in lst1 if x in lst2])
 # Question 5 Using regex
 import re
 x = "Watashi na kita, orewa zettai da"
