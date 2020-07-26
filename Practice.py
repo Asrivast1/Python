@@ -73,3 +73,14 @@ print(re.findall("[^ aeiouAEIOU]", x))
 # Question 5
 y = ["a", "e", "i", "o", "u", " "]
 print([i for i in x if i not in y])
+# Inverts the swap case of the string
+str = "Askand Srivastava"
+print(str.swapcase())
+# Finding the second larger number
+n = int(input())
+lst = []
+for i in range (n) : lst.append(input())
+dic = {}
+for element in lst : dic[element] = dic.get(element, 0) + 1
+(a, b) = sorted( [ (v,k) for k,v in dic.items() ]) [1]
+print(int(b))

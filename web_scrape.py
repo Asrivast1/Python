@@ -91,20 +91,9 @@ data = '''{
 info = json.loads(data) # loads() converts the json file into readable text format
 print('Name:',info["name"]) # info returns the text within the tag
 print('Hide:',info["email"]["hide"]) # Getting into subfolders can be done as follows
-# Coursera Assignment
-input = '''[
-  { "id" : "001",
-    "x" : "2",
-    "name" : "Chuck"
-  } ,
-  { "id" : "009",
-    "x" : "7",
-    "name" : "Chuck"
-  }
-]'''
-info = json.loads(input)
-print('User count:', len(info))
-for item in info:
-    print('Name', item['name'])
-    print('Id', item['id'])
-    print('Attribute', item['x'])
+# Downloading images from google search for datasets using python script - Web Scraping Hack
+from google_images_download import google_images_download
+response = google_images_download.googleimagesdownload()
+arguments = {"keywords":"Crops", "limit":9,'print_urls':True}
+paths = response.download(arguments)
+print(paths)
