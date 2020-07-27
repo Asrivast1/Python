@@ -13,6 +13,6 @@ input = '''[
 info = json.loads(input)
 print('User count:', len(info))
 for item in info:
-    print('Name', item['name']) # i
-    print('Id', item['id'])
+    print('Name', item['name']) # It returns the value stored inside the tags
+    print('Id', item['id']) # I dunno, it seems very much similar to info[]
     print('Attribute', item['x'])
