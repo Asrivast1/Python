@@ -56,8 +56,8 @@ print(np.transpose(m))
 # Question 2 - Using the normal way
 print([[m[j][i] for j in range(len(m))] for i in range(len(m[0]))])
 # Question 3
-input = [5, 6, 7, 8, 9]
-print([i**2 for i in input])
+inpu = [5, 6, 7, 8, 9]
+print([i**2 for i in inpu])
 # Question 4
 lst1 = [9, 8, 2, 1, 1]
 lst2 = [1, 4, 1, 1, 2]

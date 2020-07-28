@@ -32,10 +32,14 @@ sum = 0
 for tag in tags : sum += int(tag.contents[0])
 print(sum)
 # Jumping through the links
-url = input("http://python-data.dr-chuck.net/known_by_Conar.html")
+from bs4 import BeautifulSoup
+ctx = ssl.create_default_context()
+ctx.check_hostname = False
+ctx.verify_mode = ssl.CERT_NONE
+url = input()
 count = int(input('Enter count:'))
 position = int(input('Enter position:'))-1
-html = urllib.urlopen(url).read()
+html = urllib.urlopen(url, context=ctx).read()
 soup = BeautifulSoup(html,"html.parser")
 href = soup('a')
 for i in range(count):
