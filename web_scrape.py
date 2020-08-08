@@ -31,23 +31,6 @@ tags = soup("span")
 sum = 0
 for tag in tags : sum += int(tag.contents[0])
 print(sum)
-# Jumping through the links
-from bs4 import BeautifulSoup
-ctx = ssl.create_default_context()
-ctx.check_hostname = False
-ctx.verify_mode = ssl.CERT_NONE
-url = input()
-count = int(input('Enter count:'))
-position = int(input('Enter position:'))-1
-html = urllib.urlopen(url, context=ctx).read()
-soup = BeautifulSoup(html,"html.parser")
-href = soup('a')
-for i in range(count):
-    link = href[position].get('href', None)
-    print(href[position].contents[0])
-    html = urllib.urlopen(link).read()
-    soup = BeautifulSoup(html,"html.parser")
-    href = soup('a')
 # Using Element Tree
 import xml.etree.ElementTree as ET
 data = '''<person>
@@ -95,3 +78,20 @@ data = '''{
 info = json.loads(data) # loads() converts the json file into readable text format
 print('Name:',info["name"]) # info returns the text within the tag
 print('Hide:',info["email"]["hide"]) # Getting into subfolders can be done as follows
+# Coursera Assignment
+input = '''[
+  { "id" : "001",
+    "x" : "2",
+    "name" : "Chuck"
+  } ,
+  { "id" : "009",
+    "x" : "7",
+    "name" : "Chuck"
+  }
+]'''
+info = json.loads(input)
+print('User count:', len(info))
+for item in info:
+    print('Name', item['name']) # It returns the value stored inside the tags
+    print('Id', item['id']) # I dunno, it seems very much similar to info[]
+    print('Attribute', item['x'])
