@@ -84,3 +84,12 @@ dic = {}
 for element in lst : dic[element] = dic.get(element, 0) + 1
 (a, b) = sorted( [ (v,k) for k,v in dic.items() ]) [1]
 print(int(b))
+# Format Specifier
+ex = "Hello world"
+print("%s"%ex[5:8]) # Format specifier specifying that the result should be a string
+x = "DYPIEMR-Akurdi"
+print("%56s"%x) # It states that the result should be at a space of 56 spaces
+x = 345
+print("%06d"%x) # The result should be a 6 digit numeric or decimal value
+x = -122
+print("-%06d"%x) # Characters can also be added before the printing of the result
